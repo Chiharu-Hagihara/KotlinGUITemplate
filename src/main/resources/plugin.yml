@@ -1,0 +1,9 @@
+name: KotlinGUITemplate
+version: @version@
+main: mc.mec.kotlinguitemplate.KotlinGUITemplate
+api-version: 1.13
+authors:
+  - mii
+  - Mr_El_Capitan
+commands:
+  inv:
