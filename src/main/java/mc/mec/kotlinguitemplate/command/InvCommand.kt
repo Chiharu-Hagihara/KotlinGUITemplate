@@ -14,11 +14,11 @@ object InvCommand : CommandExecutor{
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>): Boolean {
         val player = (sender as? Player)
         if (args.isEmpty()) {
-            sender.sendMessage("Usage: /inv ")
+            sender.sendMessage("Usage: /inv open")
             return false
         }
         return when(args[0]) {
-            "inv" -> {
+            "open" -> {
                 if ((sender as? Player) != null) {
                     player?.sendMessage("インベントリーを開きます。")
                     val guiList : Map<Int, ItemStack?> = mapOf(1 to util.createItem(ItemStack(Material.DIAMOND),"テストボタン", listOf("ボタンのテスト")),

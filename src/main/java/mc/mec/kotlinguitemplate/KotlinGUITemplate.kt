@@ -11,7 +11,7 @@ class KotlinGUITemplate : JavaPlugin() {
     override fun onEnable() {
         // Plugin startup logic
         getCommand("inv")?.setExecutor(InvCommand)
-        EventListener()
+        EventListener(this)
     }
 
     override fun onDisable() {
