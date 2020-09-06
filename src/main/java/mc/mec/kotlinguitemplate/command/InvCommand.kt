@@ -21,8 +21,8 @@ object InvCommand : CommandExecutor{
             "open" -> {
                 if ((sender as? Player) != null) {
                     player?.sendMessage("インベントリーを開きます。")
-                    val guiList : Map<Int, ItemStack?> = mapOf(1 to util.createItem(ItemStack(Material.DIAMOND),"テストボタン", listOf("ボタンのテスト")),
-                            4 to util.createItem(ItemStack(Material.STONE),"ボタン2", listOf("ボタン2")))
+                    val guiList : Map<Int, ItemStack?> = mapOf(1 to util.createItem(ItemStack(Material.DIAMOND),"テストボタン", listOf("ボタンのテスト"), 0),
+                            4 to util.createItem(ItemStack(Material.STONE),"ボタン2", listOf("ボタン2"), 2147483647))
                     val inventory = util.createInventoryGUI("INV1",9,guiList)
 
                     player?.openInventory(inventory)

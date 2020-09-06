@@ -32,10 +32,6 @@ class EventListener(var plg : KotlinGUITemplate, val log : Logger = plg.getLogge
                     }
                 }
             }
-
-            "INV2" -> {
-                //INV2の処理
-            }
         }
     }
 }

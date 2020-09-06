@@ -13,9 +13,10 @@ class Util {
         return inventory
     }
 
-    fun createItem(item: ItemStack, name: String?, lore: List<String?>): ItemStack? {
+    fun createItem(item: ItemStack, name: String?, lore: List<String?>, cmd: Int): ItemStack? {
         val itemMeta = item.itemMeta
         itemMeta!!.setDisplayName(name)
+        itemMeta.setCustomModelData(cmd)
         itemMeta.lore = lore
         item.itemMeta = itemMeta
         return item
